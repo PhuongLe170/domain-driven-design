@@ -32,6 +32,7 @@ public class Trainer
             return TrainerErrors.CannotHaveTwoOrMoreOverlappingSessions;
         }
 
+
         _sessionIds.Add(session.Id);
         return Result.Success;
     }
