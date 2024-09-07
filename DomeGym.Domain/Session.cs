@@ -37,6 +37,7 @@ public class Session
         }
         _participantIds.Add(participant.Id);
 
+
         return Result.Success;
     }
 
