@@ -1,0 +1,32 @@
+name: PR verify
+
+on:
+  pull_request:
+    branches: ["main""]
+    
+jobs:
+  build:
+    name: PR Verify
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Setup .NET Core SDK
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0 
+      
+      # Run dotnet build and publish
+      - name: dotnet build
+        run: 
+          dotnet build --configuration Release
+      
+      - name: dotnet test
+        run:
+          dotnet test --configuration Release --no-
+        
+      - name: dotnet format
+        run:
+          dotnet format -v detailed --verify-no-changes
