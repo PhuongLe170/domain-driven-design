@@ -1,4 +1,5 @@
-﻿using Constants = DomeGym.Domain.UnitTests.TestConstants.Constants;
+﻿using DomeGym.Domain.RoomAggregate;
+using Constants = DomeGym.Domain.UnitTests.TestConstants.Constants;
 
 namespace DomeGym.Domain.UnitTests.TestUtils.Rooms;
 
