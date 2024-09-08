@@ -11,7 +11,7 @@ public class GymTests
     public void AddRoom_WhenMoreThanSubscriptionAllows_ShouldFail()
     {
         // Arrange
-        var gym = GymFactory.CreateGym(maxRoom:1);
+        var gym = GymFactory.CreateGym(maxRoom: 1);
         var room1 = RoomFactory.CreateRoom(id: Guid.NewGuid());
         var room2 = RoomFactory.CreateRoom(id: Guid.NewGuid());
 

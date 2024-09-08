@@ -13,7 +13,7 @@ public class RoomTests
     public void ScheduleSession_WhenMoreThanSubscriptionAllows_ShouldFail()
     {
         // Arrange
-        var room = RoomFactory.CreateRoom(id: Guid.NewGuid(), maxDailySessions:1);
+        var room = RoomFactory.CreateRoom(id: Guid.NewGuid(), maxDailySessions: 1);
         var session1 = SessionFactory.CreateSession(id: Guid.NewGuid());
         var session2 = SessionFactory.CreateSession(id: Guid.NewGuid());
 
@@ -30,10 +30,10 @@ public class RoomTests
     }
 
     [Theory]
-    [InlineData(1,3,1,3)] //exact overlap
-    [InlineData(1, 4, 2,4)]
-    [InlineData(1, 3, 2,4)]
-    [InlineData(1, 3, 0,2)]
+    [InlineData(1, 3, 1, 3)] //exact overlap
+    [InlineData(1, 4, 2, 4)]
+    [InlineData(1, 3, 2, 4)]
+    [InlineData(1, 3, 0, 2)]
     public void ScheduleSession_WhenSessionOverlapWithAnotherSession_ShouldFail(
         int startHourSession1,
         int endHourSession1,
@@ -41,7 +41,7 @@ public class RoomTests
         int endHourSession2)
     {
         // Arrange
-        var room = RoomFactory.CreateRoom(id: Guid.NewGuid(), maxDailySessions:2);
+        var room = RoomFactory.CreateRoom(id: Guid.NewGuid(), maxDailySessions: 2);
 
         var session1 = SessionFactory.CreateSession(
             date: Constants.Session.Date,
