@@ -4,7 +4,7 @@ namespace DomeGym.Domain.RoomAggregate;
 
 public static class RoomErrors
 {
-    public static readonly Error CannotHaveMoreSessionThanSubscriptionAllows  = Error.Validation(
+    public static readonly Error CannotHaveMoreSessionThanSubscriptionAllows = Error.Validation(
         code: "Gym.CannotHaveMoreSessionThanSubscriptionAllows",
         description: "A room cannot have more scheduled sessions than the subscription allows.");
 

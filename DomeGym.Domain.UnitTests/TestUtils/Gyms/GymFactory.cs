@@ -12,5 +12,5 @@ public static class GymFactory
     => new Gym(
         maxRooms: maxRoom,
         subscriptionId: subscriptionId ?? Constants.Subscription.Id,
-        id: id?? Constants.Gym.Id);
+        id: id ?? Constants.Gym.Id);
 }

@@ -18,8 +18,8 @@ public class SessionTests
         var participant2 = ParticipantFactory.CreateParticipant(id: Guid.NewGuid(), userId: Guid.NewGuid());
 
         // Act
-        var reserveParticipant1Result =  session.ReserveSpot(participant1);
-        var reserveParticipant2Result =  session.ReserveSpot(participant2);
+        var reserveParticipant1Result = session.ReserveSpot(participant1);
+        var reserveParticipant2Result = session.ReserveSpot(participant2);
 
         // Assert
         reserveParticipant1Result.IsError.Should().BeFalse();
@@ -39,7 +39,7 @@ public class SessionTests
         );
 
         var participant = ParticipantFactory.CreateParticipant();
-        var reserveParticipantResult =  session.ReserveSpot(participant);
+        var reserveParticipantResult = session.ReserveSpot(participant);
 
         var cancellationDateTime = Constants.Session.Date.ToDateTime(TimeOnly.MinValue);
         // Act

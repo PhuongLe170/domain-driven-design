@@ -13,7 +13,7 @@ public class Gym : AggregateRoot
     public Gym(
         int maxRooms,
         Guid subscriptionId,
-        Guid? id = null) : base( id ?? Guid.NewGuid())
+        Guid? id = null) : base(id ?? Guid.NewGuid())
     {
         _maxRooms = maxRooms;
         _subscriptionId = subscriptionId;
@@ -23,7 +23,7 @@ public class Gym : AggregateRoot
     {
         if (_roomIds.Contains(room.Id))
         {
-            return Error.Conflict(description:"Room already exists in gym.");
+            return Error.Conflict(description: "Room already exists in gym.");
         }
 
         if (_roomIds.Count >= _maxRooms)

@@ -10,6 +10,6 @@ public static class SessionErrors
 
     public static readonly Error CannotCancelReservationTooCloseToSession = Error.Validation(
         code: "Session.CannotCancelReservationTooCloseToSession",
-        description:"Cannot cancel reservation too close to session start time");
+        description: "Cannot cancel reservation too close to session start time");
 
 }
