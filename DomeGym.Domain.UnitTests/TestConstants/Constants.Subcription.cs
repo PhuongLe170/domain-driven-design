@@ -1,4 +1,6 @@
-﻿namespace DomeGym.Domain.UnitTests.TestConstants;
+﻿using DomeGym.Domain.SubscriptionAggragate;
+
+namespace DomeGym.Domain.UnitTests.TestConstants;
 
 public static partial class Constants
 {
