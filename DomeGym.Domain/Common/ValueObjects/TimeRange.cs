@@ -23,7 +23,7 @@ public class TimeRange : ValueObject
 
         if (startDate >= endDate)
         {
-            return Error.Validation(description:"Start date cannot be before end date.");
+            return Error.Validation(description: "Start date cannot be before end date.");
         }
 
         return new TimeRange(
